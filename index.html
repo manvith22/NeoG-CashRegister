@@ -2,48 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="index.js" async defer></script>
+    <title>Cash Register</title>
 </head>
 <body>
-    <div class="conatiner">
-        <h1 class="heading"></h1>
-        <p>Will able to return you change if you unable calculate Bill amount and Amount received</p>
-        <label for="bill-amount"> Bill Amount:</label>
-        <input  id="bill-amount" type="text"/>
-        <label for="amount-received"> Amount received:</label>
-        <input  id="amount-received" type="text"/>
-        <p id="message"></p>
-        <button id="btn">check</button>
-        <table class="change-table">
-          <tr>
-              <th>Number of Notes</th>
-              <td class="no-of-notes"></td>
-              <td class="no-of-notes"></td>
-              <td class="no-of-notes"></td>
-              <td class="no-of-notes"></td>
-              <td class="no-of-notes"></td>
-              <td class="no-of-notes"></td>
-              <td class="no-of-notes"></td>
-              <td class="no-of-notes"></td>
-              <td class="no-of-notes"></td>
-          </tr>
-          <tr>
-              <th>Notes</th>
-              <td>2000</td>
-              <td>500</td>
-              <td>200</td>
-              <td>100</td>
-              <td>50</td>
-              <td>20</td>
-              <td>10</td>
-              <td>5</td>
-              <td>1</td>
+    <div class="main-container">
+        <div class="heading-box">
+            <h1 class="heading">Cash Register</h1>
+            <p class="description">Cash Register helps in returning the money to the customer by entering the bill amount and the cash amount given by the customer.</p>
+        </div>
+         <div class="input-box">
+            <label class="bill">
+                Bill Amount:
+                <input type="number" class="bill-inp"/>
+                <button class="next"type="submit">Next</button>
+                <div class="bill-warning"></div>
+            </label>
+            <label class="cash hidden">
+                Cash Amount:
+                <input type="number" class="cash-inp"/>
+            </label>
+            <button type="submit" class="btn hidden">Submit</button>
+            <div class="final-warning"></div>
+        </div>
+        <table class="balance-box hidden">
+            <tr class="notes">
+                <th>Notes:</th>
+                <th>₹2000</th>
+                <th>₹500</th>
+                <th>₹100</th>
+                <th>₹20</th>
+                <th>₹10</th>
+                <th>₹5</th>
+                <th>₹1</th>
+            </tr>
+            <tr class="display-result">
+                <td class="table-desc">No. of Notes:</td>
+                <td class="two-thousand"> </td>
+                <td class="five-hundred"> </td>
+                <td class="hundred"> </td>
+                <td class="twenty"> </td>
+                <td class="ten"> </td>
+                <td class="five"> </td>
+                <td class="one"> </td>
             </tr>
         </table>
     </div>
-    <script src="./index.js"></script>
 </body>
 </html>
